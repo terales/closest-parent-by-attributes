@@ -1,6 +1,6 @@
 {
   "name": "closest-parent-by-attributes",
-  "version": "0.0.0",
+  "version": "1.0.0-sematic-release",
   "description": "",
   "main": "index.browser.js",
   "files": [
@@ -12,10 +12,12 @@
     "tdd": "mocha -w",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
     "browserify": "browserify export.js --outfile index.browser.js",
+    "commit": "git-cz",
     "push": "git push --follow-tags",
     "prepublish": "npm-run-all push browserify",
     "clean": "rimraf index.es5.js",
-    "postpublish": "npm-run-all clean"
+    "postpublish": "npm-run-all clean",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [],
   "author": "Aleksander Terekhov (https://www.terales.info/)",
@@ -23,11 +25,21 @@
   "devDependencies": {
     "browserify": "13.0.1",
     "chai": "3.5.0",
+    "commitizen": "2.8.1",
+    "cz-conventional-changelog": "1.1.6",
     "istanbul": "0.4.3",
     "jsdom": "9.1.0",
     "mocha": "2.4.5",
     "mocha-jsdom": "1.1.0",
     "npm-run-all": "2.1.1",
-    "rimraf": "2.5.2"
+    "rimraf": "2.5.2",
+    "semantic-release": "^4.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/terales/closest-parent-by-attributes.git"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }

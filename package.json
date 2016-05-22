@@ -14,7 +14,7 @@
     "browserify": "browserify export.js --outfile index.browser.js",
     "commit": "git-cz",
     "push": "git push --follow-tags",
-    "prepublish": "npm-run-all push browserify",
+    "prepublish": "npm-run-all browserify",
     "clean": "rimraf index.es5.js",
     "postpublish": "npm-run-all clean",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
@@ -39,7 +39,9 @@
     "type": "git",
     "url": "https://github.com/terales/closest-parent-by-attributes.git"
   },
-  "czConfig": {
-    "path": "node_modules/cz-conventional-changelog"
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   }
 }

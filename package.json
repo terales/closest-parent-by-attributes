@@ -2,8 +2,9 @@
   "name": "closest-parent-by-attributes",
   "version": "1.0.0-sematic-release",
   "description": "",
-  "main": "index.browser.js",
+  "main": "index.js",
   "files": [
+    "index.js",
     "index.browser.js",
     "README.md"
   ],

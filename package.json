@@ -17,7 +17,10 @@
     "prepublish": "npm-run-all browserify",
     "clean": "rimraf index.es5.js",
     "postpublish": "npm-run-all clean",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release-pre": "semantic-release pre",
+    "npm-publish": "npm publish",
+    "semantic-release-post": "semantic-release post",
+    "semantic-release": "npm-run-all semantic-release-pre npm-publish semantic-release-post"
   },
   "keywords": [],
   "author": "Aleksander Terekhov (https://www.terales.info/)",
@@ -33,7 +36,7 @@
     "mocha-jsdom": "1.1.0",
     "npm-run-all": "2.1.1",
     "rimraf": "2.5.2",
-    "semantic-release": "^4.3.5"
+    "semantic-release": "4.3.5"
   },
   "repository": {
     "type": "git",

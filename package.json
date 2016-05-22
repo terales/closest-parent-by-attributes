@@ -1,0 +1,33 @@
+{
+  "name": "closest-parent-by-attributes",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.browser.js",
+  "files": [
+    "index.browser.js",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "mocha",
+    "tdd": "mocha -w",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
+    "browserify": "browserify export.js --outfile index.browser.js",
+    "push": "git push --follow-tags",
+    "prepublish": "npm-run-all push browserify",
+    "clean": "rimraf index.es5.js",
+    "postpublish": "npm-run-all clean"
+  },
+  "keywords": [],
+  "author": "Aleksander Terekhov (https://www.terales.info/)",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "13.0.1",
+    "chai": "3.5.0",
+    "istanbul": "0.4.3",
+    "jsdom": "9.1.0",
+    "mocha": "2.4.5",
+    "mocha-jsdom": "1.1.0",
+    "npm-run-all": "2.1.1",
+    "rimraf": "2.5.2"
+  }
+}

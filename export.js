@@ -1,0 +1,1 @@
+window.closestParentByAttributes = require('./index')
